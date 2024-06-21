@@ -1,54 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> palindrome check </title>
-        <style>
-            body {background-color: blue;
-                font-family: 'arial';
-            }
-            
+  <head>
+    <title>palindrome check</title>
+    <style>
+      body {
+        background-color: blue;
+        font-family: "arial";
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Hi, welcome to the palindrome checker!
+      <input id="input" type="text" placeholder="type here" />
 
-        </style>
-        
-        </head>
-        <body>
-            <p>
-                Hi, welcome to the palindrome checker!
-                <input id="input" type="text" placeholder="type here"/>
-            
-         
-        
+      <button onclick="checkPalin()">
+        Click me to see if you have a palindrome!
+      </button>
+      <button onclick="greymode()">lets change the color!</button>
 
-      
-          <button onclick="checkPalin()">Click me to see if you have a palindrome!</button>
-          <button onclick="greymode()">lets change the color!</button>
-        
-           
-       
-          <script> 
-           const word=document.getElementById("input")
-           
+      <script>
+        const word = document.getElementById("input");
 
-          function checkPalin(){
-            const wordOne=input.value
-            const reverseWord=wordOne.split("").reverse().join("")
-            if(wordOne===reverseWord){
-                alert("palindrome")
-            }
-            else{
-                alert("not a palindrome!")
-            }
-           
-
+        function checkPalin() {
+          const wordOne = input.value;
+          const reverseWord = wordOne.split("").reverse().join("");
+          if (wordOne === reverseWord) {
+            alert("palindrome");
+          } else {
+            alert("not a palindrome!");
           }
-          function greymode(){
-            document.body.style.backgroundColor="grey";
-          }
-            
-        
-          </script>
-               
-</body>
-        
-    
+        }
+        function greymode() {
+          document.body.style.backgroundColor = "grey";
+        }
+      </script>
+    </p>
+  </body>
 </html>
